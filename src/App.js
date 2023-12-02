@@ -37,8 +37,15 @@ function App() {
         </div>
       </section>
 
-      <div className="max-w-sm mx-auto">
-        <div className="my-5">
+      <div className="max-w-sm mx-auto px-5">
+
+        <div className="mt-5">
+          <label htmlFor="base-input" className="block mb-2 text-sm font-medium text-gray-900">Input Expression</label>
+          <input type="text" id="base-input" defaultValue="X+100/2" onChange={e => setExp(e.target.value)} className="bg-gray-50 border border-gray-300 text-gray-900 text-sm focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" />
+          <button type="button" onClick={handleExp} className="mt-2 text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2">Save</button>
+        </div>
+
+        <div className="mb-5">
           <div id="result" className="text-6xl text-center font-medium text-gray-900">{value}</div>
         </div>
 
@@ -49,11 +56,6 @@ function App() {
           <input type="number" id="website-admin" onKeyDown={handleKeyDown} className="bg-gray-50 border border-gray-300 text-gray-900 focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 w-full text-sm p-2.5" placeholder="88" />
         </div>
 
-        <div className="mt-5">
-          <label htmlFor="base-input" className="block mb-2 text-sm font-medium text-gray-900">Input Expression</label>
-          <input type="text" id="base-input" defaultValue="X+100/2" onChange={e => setExp(e.target.value)} className="bg-gray-50 border border-gray-300 text-gray-900 text-sm focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" />
-          <button type="button" onClick={handleExp} className="mt-2 text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2">Save</button>
-        </div>
         <div className="mt-2 mb-5">
           <span className="block mb-2 text-md font-medium text-gray-900">History:</span>
 
